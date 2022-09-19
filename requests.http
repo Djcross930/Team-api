@@ -18,20 +18,8 @@ Content-Type: application/json
   "email": "jim@jim.com",
   "password": "password"
 }
-#####
-POST http://localhost:3000/students.json
-Content-Type: application/json
 
-{
-  "first_name": "",
-      "last_name": "",
-      "email": "",
-     "phone_number": "",
-      "short_bio": "",
-      "linked_in": "",
-      "twitter": "",
-      "blog_or_website": "",
-      "online_resume": "",
-      "github": "",
-      "photo": "",
-}
+
+#### STUDENT CREATE
+POST http://localhost:3000/students
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NjM2OTU2OTR9.n0CMIHHBRZ4cyS8pnVjybOkegWID--79x5Onl2kS6Io
