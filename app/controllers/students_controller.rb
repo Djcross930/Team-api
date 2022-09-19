@@ -1,6 +1,6 @@
 class StudentsController < ApplicationController
   def create
-    student = Student.new({
+    @student = Student.new({
       first_name: params[:first_name],
       last_name: params[:last_name],
       email: params[:email],
@@ -14,14 +14,14 @@ class StudentsController < ApplicationController
       photo: params[:photo],
       user_id: current_user.id,
     })
-    student.save
+    @student.save
     render json: student.as_json
     # Remember to change to a template later!
   end
 
   def index
-    students = Student.all()
-    render json: [students]
+    @students = Student.all()
+    render template: "students/index"
   end
 
   def show
