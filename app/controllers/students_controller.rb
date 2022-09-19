@@ -1,5 +1,19 @@
 class StudentsController < ApplicationController
   def create
+    student = Student.new({
+      first_name: params[:first_name],
+      last_name: params[:last_name],
+      email: params[:email],
+      phone_number: params[:phone_number],
+      short_bio: params[:short_bio],
+      linked_in: params[:linked_in],
+      twitter: params[:twitter],
+      blog_or_website: params[:blog_or_website],
+      online_resume: params[:online_resume],
+      github: params[:github],
+      photo: params[:photo],
+      user_id: current_user.id,
+    })
   end
 
   def index
@@ -13,6 +27,7 @@ class StudentsController < ApplicationController
   end
 
   def edit
+    student = Student.find_by(id: params[:id])
   end
 
   def delete
