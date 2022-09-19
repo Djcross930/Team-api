@@ -1,3 +1,5 @@
+jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NjM3MDYwMDd9.NpuB_nomYVXSNC0NGqLbAhaWWcsgnIxnNxojgoIZnSM
+
 ### Users create (signup)
 POST http://localhost:3000/users.json
 Content-Type: application/json
@@ -15,7 +17,7 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "dan@dan.com",
+  "email": "bob@bob.com",
   "password": "password"
 }
 
