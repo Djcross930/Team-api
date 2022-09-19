@@ -15,6 +15,7 @@ class StudentsController < ApplicationController
       user_id: current_user.id,
     })
     @student.save
+
     render template: "students/show"
   end
 

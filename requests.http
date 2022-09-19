@@ -23,3 +23,6 @@ Content-Type: application/json
 #### STUDENT CREATE
 POST http://localhost:3000/students
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NjM2OTU2OTR9.n0CMIHHBRZ4cyS8pnVjybOkegWID--79x5Onl2kS6Io
+
+### index students
+GET http://localhost:3000/students.json
