@@ -1,5 +1,18 @@
 {
-  id: @student.id,
-  created_at: @student.created_at,
-  updated_at: @student.updated_at
+    id: @student.id,
+    first_name: @student.first_name,
+    last_name: @student.last_name,
+    email: @student.email,
+    phone_number: @student.phone_number,
+    short_bio: @student.short_bio,
+    linked_in: @student.linked_in,
+    twitter: @student.twitter,
+    blog_or_website: @student.blog_or_website,
+    online_resume: @student.online_resume,
+    github: @student.github,
+    photo: @student.photo,
+    education: @student.educations,
+    experience: @student.experiences,
+    capstone: @student.capstone,
+    skills: @student.skills
 }

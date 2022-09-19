@@ -3,8 +3,8 @@ POST http://localhost:3000/users.json
 Content-Type: application/json
 
 {
-  "name": "jim",
-  "email": "jim@jim.com",
+  "name": "bob",
+  "email": "bob@bob.com",
   "password": "password",
   "password_confirmation": "password"
 }
@@ -15,14 +15,39 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "jim@jim.com",
+  "email": "dan@dan.com",
   "password": "password"
 }
 
 
 #### STUDENT CREATE
-POST http://localhost:3000/students
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NjM2OTU2OTR9.n0CMIHHBRZ4cyS8pnVjybOkegWID--79x5Onl2kS6Io
+POST http://localhost:3000/students.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjM3MDQxNjV9.JiLDCK3wwZM_z9Z-ow4AmaKU40q6QYOUcdEMD_yCu-A
 
 ### index students
 GET http://localhost:3000/students.json
+
+#### STUDENT SHOW
+
+GET http://localhost:3000/students/1.json
+
+### Student edit
+PATCH http://localhost:3000/students/1.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjM2OTc5MTd9.gRyOmdhmO0E7g_N9QdCiu4KjKQazHVKU6qr3aEiXj0Y
+Content-Type: application/json
+
+{
+  "twitter": "twitter.com/dantheman"
+}
+
+### Educations Create
+POST http://localhost:3000/educations
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjM3MDIwNzR9.6Liy4cTu3bT4OYwW-kL0cUyNLzN5DmmpkaM1zfjpZM4
+Content-Type: application/json
+
+{
+  "started_at": [2022, 01, 01],
+  "ended_at": [2022, 01, 02],
+  "degree": "Bachelors",
+  "university_name": "Iowa State"
+}

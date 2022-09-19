@@ -43,16 +43,16 @@ class StudentsController < ApplicationController
     @student.github = params[:github] || @student.github
     @student.photo = params[:photo] || @student.photo
 
-    if student.save
+    if @student.save
       render template: "students/show"
     else
-      render json: student.errors.full_messages, status: 422
+      render json: @student.errors.full_messages, status: 422
     end
   end
 
   def delete
-    student = Student.find_by(id: params[:id])
-    student.destroy
+    @student = Student.find_by(id: params[:id])
+    @student.destroy
     render json: { message: "you have removed the selected student" }
   end
 end
