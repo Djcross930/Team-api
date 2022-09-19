@@ -18,6 +18,8 @@ gem 'jb'
 
 gem 'jwt'
 
+gem 'seed_dump'
+
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
 
