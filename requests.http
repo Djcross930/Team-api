@@ -19,4 +19,20 @@ Content-Type: application/json
   "password": "password"
 }
 
+#####
+POST http://localhost:3000/students.json
+Content-Type: application/json
 
+{
+  "first_name": "",
+      "last_name": "",
+      "email": "",
+     "phone_number": "",
+      "short_bio": "",
+      "linked_in": "",
+      "twitter": "",
+      "blog_or_website": "",
+      "online_resume": "",
+      "github": "",
+      "photo": "",
+}
