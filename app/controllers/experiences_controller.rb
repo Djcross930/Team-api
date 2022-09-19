@@ -1,6 +1,6 @@
 class ExperiencesController < ApplicationController
   def create
-    @experience = Experience.new({
+    experience = Experience.new({
 
       start_date: params[:start_date],
       end_date: params[:end_date],
@@ -9,27 +9,24 @@ class ExperiencesController < ApplicationController
       details: params[:details],
       student_id: current_user.student.id,
     })
-    @experience.save
-    render template: "students/show"
+    experience.save
+    render json: experience.as_json
   end
 
   def show
-    @experience = Experience.find_by(id: params[:id])
-    render template: "students/show"
+    experience = Experience.find_by(id: params[:id])
+    render json: experience.as_json
   end
 
   def edit
-    @experience = Experience.find_by(id: params[:id])
-    @experience.first_name = params[:first_name] || @experience.first_name
-    @experience.last_name = params[:last_name] || @experience.last_name
-    @experience.email = params[:email] || @experience.email
-    @experience.phone_number = params[:phone_number] || @experience.phone_number
-    @experience.short_bio = params[:short_bio] || @experience.short_bio
-    @experience.linked_in = params[:linked_in] || @experience.linked_in
-    @experience.twitter = params[:twitter] || @student.twitter
-
-    if student.save
-      render template: "students/show"
+    experience = Experience.find_by(id: params[:id])
+    experience.start_date = params[:start_date] || experience.start_date
+    experience.end_date = params[:end_date] || experience.end_date
+    experience.job_title = params[:job_title] || experience.job_title
+    experience.company_name = params[:company_name] || experience.company_name
+    experience.details = params[:details] || experience.details
+    if experience.save
+      render json: experience.as_json
     else
       render json: student.errors.full_messages, status: 422
     end
@@ -38,5 +35,6 @@ class ExperiencesController < ApplicationController
   def delete
     experience = Experience.find_by(id: params[:id])
     experience.destroy
+    render json: {message: "Experience destroyed"}
   end
 end
