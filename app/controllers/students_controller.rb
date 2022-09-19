@@ -14,6 +14,9 @@ class StudentsController < ApplicationController
       photo: params[:photo],
       user_id: current_user.id,
     })
+    student.save
+    render json: student.as_json
+    # Remember to change to a template later!
   end
 
   def index
