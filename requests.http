@@ -19,7 +19,6 @@ Content-Type: application/json
   "password": "password"
 }
 
-
 #### STUDENT CREATE
 POST http://localhost:3000/students.json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjM3MDQxNjV9.JiLDCK3wwZM_z9Z-ow4AmaKU40q6QYOUcdEMD_yCu-A
@@ -90,3 +89,32 @@ Content-Type: application/json
 #### EXPERIENCES DELETE
 
 DELETE http://localhost:3000/experiences/1.json
+
+
+#### CAPSTONE CREATE
+POST http://localhost:3000/capstones
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjM3Nzk1MTl9.M6MLYwCuplslCwBI344guzZuySyUJ-O6gY452uzD978
+Content-Type: application/json
+
+{
+  "name": "workout app",
+  "description": "workout!!",
+  "url": "www.workout.com",
+  "screenshot": "workout.jpg"
+}
+
+### CAPSTONE EDIT
+PATCH http://localhost:3000/capstones/2
+Content-Type: application/json
+
+{
+  "name": "the best workout app"
+}
+
+### CAPSTONE DESTROY
+DELETE http://localhost:3000/capstones/2
+
+### CAPSTONE SHOW
+GET http://localhost:3000/capstones/1
+
+
