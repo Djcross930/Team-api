@@ -21,7 +21,6 @@ Content-Type: application/json
   "password": "password"
 }
 
-
 #### STUDENT CREATE
 POST http://localhost:3000/students.json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjM3MDQxNjV9.JiLDCK3wwZM_z9Z-ow4AmaKU40q6QYOUcdEMD_yCu-A
@@ -54,7 +53,7 @@ Content-Type: application/json
   "university_name": "Jesuit university"
 }
 
-
+#######################################
 ### Experiences Create
 POST http://localhost:3000/experiences
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjM3MDIwNzR9.6Liy4cTu3bT4OYwW-kL0cUyNLzN5DmmpkaM1zfjpZM4
@@ -68,6 +67,31 @@ Content-Type: application/json
   "details": ""
 
 }
+
+### EXPERIENCES index 
+GET http://localhost:3000/experiences.json
+
+#### EXPERIENCES SHOW
+
+GET http://localhost:3000/experiences/1.json
+
+
+### Experiences update 
+PATCH http://localhost:3000/experiences/2.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjM3MDIwNzR9.6Liy4cTu3bT4OYwW-kL0cUyNLzN5DmmpkaM1zfjpZM4
+Content-Type: application/json
+
+{
+  "start_date": "2020-07-01",
+  "end_date": "2022-01-01"
+  
+}
+
+
+#### EXPERIENCES DELETE
+
+DELETE http://localhost:3000/experiences/1.json
+
 
 #### CAPSTONE CREATE
 POST http://localhost:3000/capstones
@@ -94,4 +118,5 @@ DELETE http://localhost:3000/capstones/2
 
 ### CAPSTONE SHOW
 GET http://localhost:3000/capstones/1
+
 
