@@ -25,7 +25,7 @@ class StudentsController < ApplicationController
   end
 
   def show
-    @student = Student.find_by(id: params[:id])
+    @student = Student.find_by(id: current_user.student.id)
     render template: "students/show"
   end
 

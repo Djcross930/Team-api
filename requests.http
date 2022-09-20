@@ -17,7 +17,7 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "bob@bob.com",
+  "email": "dan@dan.com",
   "password": "password"
 }
 
@@ -30,7 +30,9 @@ GET http://localhost:3000/students.json
 
 #### STUDENT SHOW
 
-GET http://localhost:3000/students/1.json
+GET http://localhost:3000/students.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjM3ODgzNzd9.HZPfODI4QVh0KjQUudUnbBxwfKBGgM4a2Ve7xSXMRHE
+
 
 ### Student edit
 PATCH http://localhost:3000/students/1.json
