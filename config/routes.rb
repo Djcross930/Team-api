@@ -13,7 +13,8 @@ Rails.application.routes.draw do
 
   post "/educations" => "educations#create"
 
-  ####
+  #### EXPERIENCES ROUTES
+
   get "/experiences" => "experiences#index"
   get "/experiences/:id" => "experiences#show"
   post "experiences" => "experiences#create"

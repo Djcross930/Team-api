@@ -52,7 +52,7 @@ Content-Type: application/json
   "university_name": "Iowa State"
 }
 
-
+#######################################
 ### Experiences Create
 POST http://localhost:3000/experiences
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjM3MDIwNzR9.6Liy4cTu3bT4OYwW-kL0cUyNLzN5DmmpkaM1zfjpZM4
@@ -66,3 +66,27 @@ Content-Type: application/json
   "details": ""
 
 }
+
+### EXPERIENCES index 
+GET http://localhost:3000/experiences.json
+
+#### EXPERIENCES SHOW
+
+GET http://localhost:3000/experiences/1.json
+
+
+### Experiences update 
+PATCH http://localhost:3000/experiences/2.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjM3MDIwNzR9.6Liy4cTu3bT4OYwW-kL0cUyNLzN5DmmpkaM1zfjpZM4
+Content-Type: application/json
+
+{
+  "start_date": "2020-07-01",
+  "end_date": "2022-01-01"
+  
+}
+
+
+#### EXPERIENCES DELETE
+
+DELETE http://localhost:3000/experiences/1.json

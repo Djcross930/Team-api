@@ -13,6 +13,11 @@ class ExperiencesController < ApplicationController
     render json: experience.as_json
   end
 
+  def index
+    experience = Experience.find_by(id: params[:id])
+    render json: experience.as_json
+  end
+
   def show
     experience = Experience.find_by(id: params[:id])
     render json: experience.as_json
@@ -32,9 +37,9 @@ class ExperiencesController < ApplicationController
     end
   end
 
-  def delete
+  def destroy
     experience = Experience.find_by(id: params[:id])
     experience.destroy
-    render json: {message: "Experience deleted"}
+    render json: { message: "Experience deleted" }
   end
 end
