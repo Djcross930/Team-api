@@ -10,8 +10,11 @@ Rails.application.routes.draw do
   post "students" => "students#create"
   patch "/students/:id" => "students#edit"
   delete "/students/:id" => "students#destroy"
-
-  post "/educations" => "educations#create"
+  #### educations
+  get "/educations/:id" => "educations#show"
+  post "educations" => "educations#create"
+  patch "/educations/:id" => "educations#edit"
+  delete "/educations/:id" => "educations#destroy"
 
   ####
   get "/experiences" => "experiences#index"
@@ -19,4 +22,7 @@ Rails.application.routes.draw do
   post "experiences" => "experiences#create"
   patch "/experiences/:id" => "experiences#edit"
   delete "/experiences/:id" => "experiences#destroy"
+
+
+  ####
 end

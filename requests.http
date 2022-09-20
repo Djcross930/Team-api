@@ -43,15 +43,15 @@ Content-Type: application/json
 }
 
 ### Educations Create
-POST http://localhost:3000/educations
+DELETE http://localhost:3000/educations/2
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjM3MDIwNzR9.6Liy4cTu3bT4OYwW-kL0cUyNLzN5DmmpkaM1zfjpZM4
 Content-Type: application/json
 
 {
-  "start_date": "2022-07-01",
-  "end_date": "2022-12-01",
+  "start_date": "1745-07-01",
+  "end_date": "1212-12-01",
   "degree": "Bachelors",
-  "university_name": "Iowa State"
+  "university_name": "Jesuit university"
 }
 
 
