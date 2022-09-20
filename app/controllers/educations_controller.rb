@@ -28,9 +28,10 @@ class EducationsController < ApplicationController
       render json: education.errors.full_messages, status: 422
     end
   end
-
+  
   def destroy
     education = Education.find_by(id: params[:id])
     education.destroy
+    render json: {message: "Education deleted."}
   end
 end
