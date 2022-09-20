@@ -19,4 +19,9 @@ Rails.application.routes.draw do
   post "experiences" => "experiences#create"
   patch "/experiences/:id" => "experiences#edit"
   delete "/experiences/:id" => "experiences#destroy"
+
+  post "/capstones" => "capstones#create"
+  patch "/capstones/:id" => "capstones#edit"
+  delete "/capstones/:id" => "capstones#delete"
+  get "/capstones/:id" => "capstones#show"
 end
