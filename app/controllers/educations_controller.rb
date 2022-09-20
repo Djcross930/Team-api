@@ -1,8 +1,8 @@
 class EducationsController < ApplicationController
   def create
     education = Education.new({
-      start_date: Date.new(params[:start_date]),
-      end_date: Date.new(params[:end_date]),
+      start_date: Date.parse(params[:start_date]),
+      end_date: Date.parse(params[:end_date]),
       degree: params[:degree],
       university_name: params[:university_name],
       student_id: current_user.student.id,

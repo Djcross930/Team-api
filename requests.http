@@ -46,8 +46,23 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjM3MDIwN
 Content-Type: application/json
 
 {
-  "started_at": [2022, 01, 01],
-  "ended_at": [2022, 01, 02],
+  "start_date": "2022-07-01",
+  "end_date": "2022-12-01",
   "degree": "Bachelors",
   "university_name": "Iowa State"
+}
+
+
+### Experiences Create
+POST http://localhost:3000/experiences
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NjM3MDIwNzR9.6Liy4cTu3bT4OYwW-kL0cUyNLzN5DmmpkaM1zfjpZM4
+Content-Type: application/json
+
+{
+  "start_date": "2022-07-01",
+  "end_date": "2022-12-01",
+  "job_title": "",
+  "company_name": "Tesla",
+  "details": ""
+
 }
